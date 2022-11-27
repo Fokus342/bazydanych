@@ -1,0 +1,11 @@
+alter database `aniszkiewiczd` default character set utf8 collate utf8_unicode_ci
+create table walizka (
+`id_walizki` int primary key auto_increment not null, 
+`pojemnosc` int unsigned,
+`kolor` enum('różowy','czerwony','tęczowy','żółty'),
+`id_wlasciciela` int foreign key(id_wlasciciela) references postac(id_postaci) on delete cascade);
+
+alter table walizka alter kolor set default = 'rozowy';
+
+insert into walizka (id_wlasciciela) values ('1');
+insert into walizka (id_wlasciciela) values ('3');

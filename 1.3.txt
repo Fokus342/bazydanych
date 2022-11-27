@@ -1,0 +1,9 @@
+create table izba(
+`adres_budynku` varchar(30),
+`nazwa_izby` varchar(15),
+`metraz` int unsigned,
+`wlasciciel` varchar(25),
+foreign key(wlasciciel) references postac(id_postaci) on delete set null);
+
+alter table izba add column `kolor` varchar(20) default 'czarny' after metraz;
+insert into izba (adres_budynku, nazwa_izby) values ('adresspizarni','spizarnia');
