@@ -1,0 +1,6 @@
+alter table postac add `pesel` varchar(11) NOT NULL ;
+
+alter table postac modify column `rodzaj`varchar(20);
+
+insert into postac (id_postaci,nazwa,rodzaj,pesel) values (213,"Gertruda Nieszczera","Syrena",2131);
+

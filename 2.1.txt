@@ -1,0 +1,6 @@
+delete from postac where nazwa = "Brutal";
+delete from postac where nazwa = "Khorad";
+alter table walizka drop foreign key `walizka_ibfk_1`;
+alter table przetwory drop foreign key `przetwory_ibfk_1`;
+alter table przetwory drop foreign key `przetwory_ibfk_2`;
+alter table postac drop primary key `id_postaci`;

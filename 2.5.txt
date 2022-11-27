@@ -1,0 +1,16 @@
+alter table marynarz drop column statek;
+alter table postac drop column statek;
+
+delete from postac where nazwa = "Defgard";
+mysql> delete from marynarz where nazwa = "Defgard";
+
+delete from statek where nazwa_statku = "knara";
+delete from statek where nazwa_statku = "titanic";
+
+create table zwierz( `id`int primary key Auto_increment, `nazwa`varchar(30), `wiek`int unsigned);
+
+
+insert into zwierz (nazwa,wiek) values ("Drozd",12);
+insert into zwierz (nazwa,wiek) values ("Gertruda Nieszczera",20);
+insert into zwierz (nazwa,wiek) values ("Loko",145);
+

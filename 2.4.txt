@@ -1,0 +1,6 @@
+ insert into postac (id_postaci,nazwa,rodzaj,pesel) values (5734,"Loko","wonsz",1234);
+
+ create table marynarz as select * from postac;
+
+ delete from marynarz where nazwa = "Loko";
+
