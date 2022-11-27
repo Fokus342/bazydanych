@@ -1,0 +1,27 @@
+1.5
+create table statek(
+    -> `nazwa statku` varchar(50) primary key,
+    -> `rodzaj statku` enum("statek1","statek2"),
+    -> `data_wodowania` date,
+    -> `max_ladownosc` int unsigned);
+
+insert into statek(nazwa_statku,data_wodowania,max_ladownosc) values ("titanic","1669-03-13","2500");
+insert into statek(nazwa_statku,data_wodowania,max_ladownosc) values ("knara","1652-01-19","1600");
+
+
+alter table postac add column `funkcja`varchar(50);
+update postac set funkcja ="kapitan" where nazwa="Bjorn";
+alter table postac
+    -> add `statek` int foreign key references(nazwa_statku);
+ update postac set statek ="titanic" where nazwa="Bjorn";
+ update postac set statek ="titanic" where nazwa="Drozd";
+ update postac set statek ="knara" where nazwa="Tesciowa";
+ update postac set statek ="titanic" where nazwa="Dziadek";
+ update postac set statek ="knara" where nazwa="Brutal";
+ update postac set statek ="knara" where nazwa="Khorad";
+ update postac set statek ="knara" where nazwa="Birgun";
+ update postac set statek ="titanic" where nazwa="Defgard";
+ update postac set statek ="titanic" where nazwa="Astrid";
+
+ delete from izba where nazwa_izby = "spizarnia";
+drop table izba;
