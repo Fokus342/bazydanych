@@ -1,0 +1,6 @@
+ select kreatura.nazwa,sum(zasob.waga) from kreatura join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury join zasob on ekwipunek.idZasobu = zasob.idZasobu where not kreatura.rodzaj="wiedzma" group by kreatura.nazwa;
+
+
+select nazwa from zasob where waga between 2.00 and 5.00;
+
+ select kreatura.nazwa,sum(zasob.waga) as "calawaga" from kreatura join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury join zasob on ekwipunek.idZasobu = zasob.idZasobu where kreatura.nazwa like '%or%' and zasob.waga between 30 and 70;

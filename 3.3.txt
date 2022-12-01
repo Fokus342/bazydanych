@@ -1,0 +1,5 @@
+select month(dataPozyskania),nazwa from zasob where month(dataPozyskania) in (7,8);
+
+select nazwa from zasob where rodzaj is not null group by waga;
+
+select dataUr,nazwa from kreatura order by dataUr  limit 5;
