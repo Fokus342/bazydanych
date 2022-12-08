@@ -1,0 +1,6 @@
+select avg(waga) from kreatura where rodzaj = "wiking";
+
+ select rodzaj,count(nazwa),avg(waga) from kreatura group by rodzaj;
+
+
+select rodzaj ,avg(2020- year(dataUr)) from kreatura group by rodzaj;

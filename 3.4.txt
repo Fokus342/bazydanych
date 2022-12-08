@@ -1,0 +1,7 @@
+select distinct rodzaj from zasob;
+
+
+select concat(nazwa,"-" ,rodzaj) as "nazwa-rodzaj" from kreatura;
+
+
+ select nazwa ,(waga*ilosc) as "waga calkowita" from zasob where year(dataPozyskania) between 2000 and 2007;
