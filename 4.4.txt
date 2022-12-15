@@ -1,0 +1,5 @@
+ select kreatura.nazwa ,kreatura.dataUr ,zasob.nazwa from kreatura natural join ekwipunek inner join zasob on ekwipunek.idZasobu = zasob.idZasobu where kreatura.rodzaj = "wiking" and kreatura.DataUr like "167%";
+
+select kreatura.nazwa , kreatura.DataUr , zasob.rodzaj from kreatura natural join ekwipunek  join zasob on ekwipunek.idZasobu = zasob.idZasobu  where zasob.rodzaj = "jedzenie" order by kreatura.DataUr;
+
+select a.nazwa,b.nazwa from kreatura a inner join kreatura b on a.idKreatury = b.idKreatury - 5;

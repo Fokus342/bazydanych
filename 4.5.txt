@@ -1,0 +1,3 @@
+select kreatura.rodzaj, avg(ekwipunek.ilosc * zasob.waga * zasob.ilosc) from kreatura join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury join zasob on ekwipunek.idZasobu = zasob.idZasobu where kreatura.rodzaj not in("malpa","waz") and ekwipunek.ilosc < 30 group by kreatura.rodzaj;
+
+ select kreatura.nazwa, kreatura.DataUr, kreatura.rodzaj from kreatura where DataUr - (select  max(dataUr) from kreatura limit 1 )or dataUr - (select min(dataUr) from kreatura limit 1);
